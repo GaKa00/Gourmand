@@ -1,5 +1,5 @@
 // api.js or wherever getRestaurants is
-const getRestaurants = async (city = "Stockholm") => {
+const getRestaurants = async (city, activeTab) => {
   try {
     const geocodeUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${city}&key=${GOOGLE_API_KEY}`;
     const geocodeRes = await fetch(geocodeUrl);

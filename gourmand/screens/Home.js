@@ -11,20 +11,21 @@ import getRestaurants from "../api/getRestaurants"; // adjust path
 export default function Home() {
   const [restaurants, setRestaurants] = useState([]);
   const [city, setCity] = useState("Stockholm");
+const [activeTab, setActiveTab] = useState("Delivery");
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await getRestaurants(city);
+      const data = await getRestaurants(city, activeTab);
       setRestaurants(data);
     };
 
     fetchData();
-  }, [city]);
+  }, [city, activeTab]);
 
   return (
     <SafeAreaView style={{ backgroundColor: "gray", flex: 1 }}>
       <View style={{ backgroundColor: "white", padding: 15 }}>
-        <HeaderTabs />
+        <HeaderTabs activeTab={activeTab} setActiveTab={setActiveTab} />
         <Searchbar setCity={setCity} />
       </View>
       <Categories />
