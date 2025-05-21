@@ -45,7 +45,7 @@ export default function Categories() {
           key={index}
           style={{
             paddingHorizontal: 20,
-            paddingVertical: 10,
+            paddingVertical: 12,
             alignItems: "center",
           }}
         >
