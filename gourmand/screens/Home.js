@@ -6,7 +6,8 @@ import Categories from "../components/Categories";
 import RestaurantItem from "../components/RestaurantItem";
 import { useEffect, useState } from "react";
 import Searchbar from "../components/Searchbar";
-import getRestaurants from "../api/getRestaurants"; // adjust path
+import getRestaurants from "../api/getRestaurants"; 
+import BottomTabs from "../components/BottomTabs";
 
 export default function Home() {
   const [restaurants, setRestaurants] = useState([]);
@@ -30,6 +31,8 @@ const [activeTab, setActiveTab] = useState("Delivery");
       </View>
       <Categories />
       <RestaurantItem restaurantData={restaurants} />
+      <Divider width={1} />
+      <BottomTabs/>
     </SafeAreaView>
   );
 }
