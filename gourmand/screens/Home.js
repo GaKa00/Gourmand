@@ -1,13 +1,13 @@
 // screens/Home.js
 import { View } from "react-native";
-import HeaderTabs from "../components/HeaderTabs";
+import HeaderTabs from "../components/home/HeaderTabs";
 import { SafeAreaView } from "react-native";
-import Categories from "../components/Categories";
-import RestaurantItem from "../components/RestaurantItem";
+import Categories from "../components/home/Categories";
+import RestaurantItem from "../components/home/RestaurantItem";
 import { useEffect, useState } from "react";
-import Searchbar from "../components/Searchbar";
+import Searchbar from "../components/home/Searchbar";
 import getRestaurants from "../api/getRestaurants"; 
-import BottomTabs from "../components/BottomTabs";
+import BottomTabs from "../components/home/BottomTabs";
 
 export default function Home() {
   const [restaurants, setRestaurants] = useState([]);
