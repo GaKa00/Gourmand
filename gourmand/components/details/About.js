@@ -33,8 +33,8 @@ const Label = ({ label, value }) => (
   </Text>
 );
 
-export default function About() {
-  const item = googleRestaurantInfo[0];
+export default function About(props) {
+  const item = props.route.params;
 
 
   const imageUrl = `https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=${item.photos[0].photo_reference}&key=${GOOGLE_API_KEY}`;
