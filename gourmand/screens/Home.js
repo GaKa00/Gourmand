@@ -9,7 +9,7 @@ import Searchbar from "../components/home/Searchbar";
 import getRestaurants from "../api/getRestaurants"; 
 import BottomTabs from "../components/home/BottomTabs";
 
-export default function Home() {
+export default function Home({navigation}) {
   const [restaurants, setRestaurants] = useState([]);
   const [city, setCity] = useState("Stockholm");
 const [activeTab, setActiveTab] = useState("Delivery");
@@ -30,7 +30,7 @@ const [activeTab, setActiveTab] = useState("Delivery");
         <Searchbar setCity={setCity} />
       </View>
       <Categories />
-      <RestaurantItem restaurantData={restaurants} />
+      <RestaurantItem restaurantData={restaurants}  navigation={navigation}/>
       <Divider width={1} />
       <BottomTabs/>
     </SafeAreaView>

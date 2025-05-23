@@ -9,7 +9,7 @@ export default function MenuItems() {
         <>
           <MenuItemInfo key={index} foodItem={Item} />
           <MenuItemImage key={index} foodImage={Item} />
-          <Divider width={0.5} orientation="vertical" />
+          <Divider width={0.5} orientation="vertical"  />
         </>
       ))}
     </ScrollView>
